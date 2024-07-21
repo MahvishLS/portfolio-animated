@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, rgb(0, 124, 130), #292c22);
+    background: linear-gradient(30deg, #85bc22, #2e4a07);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -31,42 +31,119 @@ body {
 
 @keyframes moveSquares {
     0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(0);
     }
     100% {
-        transform: translateY(calc(100vh - 100px)) translateX(calc(100vw - 100px)) rotate(360deg);
+        transform: translateY(-30px);
     }
+}
+
+/* Random positions for squares */
+.square:nth-child(1) {
+    top: 50px;
+    left: 70px;
+    height: 170px;
+    width: 170px;
+    animation-duration: 12s;
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
 }
 
 .square:nth-child(2) {
-    width: 80px;
-    height: 80px;
-    animation-duration: 22s;
-    animation-delay: 2s;
+    top: 300px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    animation-duration: 7s;
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
 }
 
 .square:nth-child(3) {
-    width: 60px;
-    height: 60px;
-    animation-duration: 24s;
-    animation-delay: 4s;
+    top: 200px;
+    left: 900px;
+    width: 85px;
+    height: 85px;
+
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation-duration: 5s;
+
 }
 
 .square:nth-child(4) {
-    width: 40px;
-    height: 40px;
-    animation-duration: 26s;
-    animation-delay: 6s;
+    top: 400px;
+    right: 200px;
+    width: 170px;
+    height: 170px;
+    animation-duration: 12s;
+    animation-delay: 3.2s;
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
 }
 
 .square:nth-child(5) {
-    width: 20px;
-    height: 20px;
-    animation-duration: 28s;
+    bottom: 80px;
+    left: 150px;
+    width: 120px;
+    height: 120px;
+    animation-duration: 10s;
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     animation-delay: 8s;
 }
 
-.login-container {
+.square:nth-child(6) {
+   top: 150px;
+    right: 80px;
+    width: 100px;
+    height: 100px;
+    animation-duration: 12s;
+    background: none;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+}
+
+.square:nth-child(7) {
+    top: 50px;
+    left: 800px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation-duration: 14s;
+
+}
+
+.square:nth-child(8) {
+    bottom: 140px;
+    left: 200px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation-duration: 20s;
+    background: none;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.contact-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 10px;
@@ -86,20 +163,21 @@ body {
     }
 }
 
-.login-form {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: center;
     z-index: 1;
+    padding: 20px;
 }
 
-.login-form h2 {
+.contact-form h2 {
     margin-bottom: 20px;
     color: #fff;
 }
 
-.login-form input {
+.contact-form input {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -109,43 +187,68 @@ body {
     font-size: 16px;
 }
 
-.login-form input::placeholder {
+.contact-form input::placeholder {
     color: #fff;
 }
 
-.login-form button {
+.contact-form button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: rgb(0, 124, 130);
+    background: #2e4a07;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
-.login-form button:hover {
-    background: #ff2fa0;
+.contact-form button:hover {
+    background: #85bc22;
 }
 
 .links {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    gap: 15px;
+    justify-content: center;
     margin-top: 15px;
 }
 
 .links a {
     color: #fff;
+    font-size: 24px;
+    margin: 6px;
     text-decoration: none;
-    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.links a span {
-    color: #ff6fd8;
-    text-decoration: underline;
+.links a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #2e4a07;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.links a:hover span {
-    color: #ff2fa0;
+.links a i:hover{
+    animation: pulse 2s linear;
+
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 #2e4a07;
+    }
+    40%{
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+    }
+    0%{
+        box-shadow: 0 0 0 0 #2e4a07;
+    }
 }
