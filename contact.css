@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgb(0, 124, 130), #292c22);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: moveSquares 20s infinite alternate ease-in-out;
+}
+
+@keyframes moveSquares {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(calc(100vh - 100px)) translateX(calc(100vw - 100px)) rotate(360deg);
+    }
+}
+
+.square:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    animation-duration: 22s;
+    animation-delay: 2s;
+}
+
+.square:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    animation-duration: 24s;
+    animation-delay: 4s;
+}
+
+.square:nth-child(4) {
+    width: 40px;
+    height: 40px;
+    animation-duration: 26s;
+    animation-delay: 6s;
+}
+
+.square:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    animation-duration: 28s;
+    animation-delay: 8s;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.login-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-form input::placeholder {
+    color: #fff;
+}
+
+.login-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(0, 124, 130);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+    background: #ff2fa0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a span {
+    color: #ff6fd8;
+    text-decoration: underline;
+}
+
+.links a:hover span {
+    color: #ff2fa0;
+}

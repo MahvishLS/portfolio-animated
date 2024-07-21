@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="skills.css" />
+  </head>
+  <body>
+    <h1 class="title-text">My Skills</h1>
+    <div class="skills-container">
+      <div class="skill-card">
+        <div class="circular-progress">
+          <div class="progress-value">0</div>
+        </div>
+        <div class="skill-name">HTML</div>
+        <div class="result"></div>
+      </div>
+      <div class="skill-card">
+        <div class="circular-progress">
+          <div class="progress-value">0</div>
+        </div>
+        <div class="skill-name">CSS</div>
+        <div class="result"></div>
+      </div>
+      <div class="skill-card">
+        <div class="circular-progress">
+          <div class="progress-value">0</div>
+        </div>
+        <div class="skill-name">JavaScript</div>
+        <div class="result"></div>
+      </div>
+      <div class="skill-card">
+        <div class="circular-progress">
+          <div class="progress-value">0</div>
+        </div>
+        <div class="skill-name">React</div>
+        <div class="result"></div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      circularMeter(85, 0); // Skill 1
+      circularMeter(70, 1); // Skill 2
+      circularMeter(45, 2); // Skill 3
+      circularMeter(60, 3); // Skill 4
+
+      function circularMeter(finalPoints, cardIndex) {
+        let circularProgress =
+          document.querySelectorAll(".circular-progress")[cardIndex];
+        let progressValue =
+          document.querySelectorAll(".progress-value")[cardIndex];
+        let result = document.querySelectorAll(".result")[cardIndex];
+
+        let startValue = 0;
+        let endValue = finalPoints;
+        let speed = 45;
+
+        let progress = setInterval(() => {
+          startValue++;
+          result.innerHTML = startValue;
+          progressValue.textContent = `${startValue}`;
+          circularProgress.style.background = `conic-gradient( #85bc22 ${
+            startValue * 3.6
+          }deg, #000 0deg)`;
+          if (startValue == endValue) {
+            clearInterval(progress);
+          }
+        }, speed);
+      }
+    </script>
+  </body>
+</html>
