@@ -14,28 +14,28 @@
           <div class="progress-value">0</div>
         </div>
         <div class="skill-name">HTML</div>
-        <div class="result"></div>
+        
       </div>
       <div class="skill-card">
         <div class="circular-progress">
           <div class="progress-value">0</div>
         </div>
         <div class="skill-name">CSS</div>
-        <div class="result"></div>
+        
       </div>
       <div class="skill-card">
         <div class="circular-progress">
           <div class="progress-value">0</div>
         </div>
         <div class="skill-name">JavaScript</div>
-        <div class="result"></div>
+        
       </div>
       <div class="skill-card">
         <div class="circular-progress">
           <div class="progress-value">0</div>
         </div>
         <div class="skill-name">React</div>
-        <div class="result"></div>
+        
       </div>
     </div>
 
@@ -51,7 +51,7 @@
           document.querySelectorAll(".circular-progress")[cardIndex];
         let progressValue =
           document.querySelectorAll(".progress-value")[cardIndex];
-        let result = document.querySelectorAll(".result")[cardIndex];
+        
 
         let startValue = 0;
         let endValue = finalPoints;
@@ -59,8 +59,7 @@
 
         let progress = setInterval(() => {
           startValue++;
-          result.innerHTML = startValue;
-          progressValue.textContent = `${startValue}`;
+          progressValue.innerHTML = startValue;
           circularProgress.style.background = `conic-gradient( #85bc22 ${
             startValue * 3.6
           }deg, #000 0deg)`;
