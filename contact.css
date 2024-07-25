@@ -19,17 +19,17 @@ body {
     z-index: -1;
 }
 
-.square {
+.circle {
     position: absolute;
     width: 100px;
     height: 100px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    animation: moveSquares 20s infinite alternate ease-in-out;
+    animation: movecircles 20s infinite alternate ease-in-out;
 }
 
-@keyframes moveSquares {
+@keyframes movecircles {
     0% {
         transform: translateY(0);
     }
@@ -44,8 +44,8 @@ body {
     }
 }
 
-/* Random positions for squares */
-.square:nth-child(1) {
+/* Random positions for circles */
+.circle:nth-child(1) {
     top: 50px;
     left: 70px;
     height: 170px;
@@ -57,7 +57,7 @@ body {
 
 }
 
-.square:nth-child(2) {
+.circle:nth-child(2) {
     top: 300px;
     left: 30px;
     width: 90px;
@@ -69,7 +69,7 @@ body {
 
 }
 
-.square:nth-child(3) {
+.circle:nth-child(3) {
     top: 200px;
     left: 900px;
     width: 85px;
@@ -82,7 +82,7 @@ body {
 
 }
 
-.square:nth-child(4) {
+.circle:nth-child(4) {
     top: 400px;
     right: 200px;
     width: 170px;
@@ -95,7 +95,7 @@ body {
 
 }
 
-.square:nth-child(5) {
+.circle:nth-child(5) {
     bottom: 80px;
     left: 150px;
     width: 120px;
@@ -107,7 +107,7 @@ body {
     animation-delay: 8s;
 }
 
-.square:nth-child(6) {
+.circle:nth-child(6) {
    top: 150px;
     right: 80px;
     width: 100px;
@@ -119,7 +119,7 @@ body {
 
 }
 
-.square:nth-child(7) {
+.circle:nth-child(7) {
     top: 50px;
     left: 800px;
     width: 50px;
@@ -131,7 +131,7 @@ body {
 
 }
 
-.square:nth-child(8) {
+.circle:nth-child(8) {
     bottom: 140px;
     left: 200px;
     border-radius: 50%;
