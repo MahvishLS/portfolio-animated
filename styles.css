@@ -213,27 +213,6 @@ body {
   text-align: left;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(30px); 
-  transition: opacity 0.5s ease, transform 0.5s ease; 
-}
-
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0); 
-}
-
-
-/* .individual-project:nth-child(1) { transition-delay: 0.1s; }
-.individual-project:nth-child(2) { transition-delay: 0.2s; }
-.individual-project:nth-child(3) { transition-delay: 0.3s; }
-.individual-project:nth-child(4) { transition-delay: 0.4s; }
-.individual-project:nth-child(5) { transition-delay: 0.5s; }
-.individual-project:nth-child(6) { transition-delay: 0.6s; } */
-
-
 .button {
   position: relative;
   transition: transform 0.4s ease;
@@ -336,9 +315,6 @@ a {
 }
 
 /* View geometric shapes */
-/* .button:hover .button{
-  transform: rotate(-5deg) scale(1.1);
-} */
 
 .button:hover img {
   opacity: 1;
@@ -372,7 +348,6 @@ a {
 
 .main-heading {
   font-size: 2rem;
-  /* color: #5a8a01; */
   margin: 60px 0;
   text-align: center;
 }
@@ -433,4 +408,25 @@ a {
 .visible {
   opacity: 1;
 }
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px); 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+
+/* .individual-project:nth-child(1) { transition-delay: 0.1s; }
+.individual-project:nth-child(2) { transition-delay: 0.2s; }
+.individual-project:nth-child(3) { transition-delay: 0.3s; }
+.individual-project:nth-child(4) { transition-delay: 0.4s; }
+.individual-project:nth-child(5) { transition-delay: 0.5s; }
+.individual-project:nth-child(6) { transition-delay: 0.6s; } */
 
